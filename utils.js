@@ -5,14 +5,14 @@
  */
 class Beat {
     constructor(audioSrc) {
-      this.audioSrc = new Audio(audioSrc)
+        this.audioSrc = new Audio(audioSrc);
+        console.log(this.audioSrc);
     }
     playKey= () => {
         return this.audioSrc.play();
     }
 }
-let song = new Beat("./assets/Musical Orches 4.mp3")
-console.log(song.playKey());
+
 /**
  * Button class that keeps track of the button color based on a press
  */
