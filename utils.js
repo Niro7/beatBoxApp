@@ -4,22 +4,26 @@
  * HINT: Create a play function to play the audio if called
  */
 class Beat {
-    constructor(audioSrc) {
-        this.audioSrc = new Audio(audioSrc);
-        console.log(this.audioSrc);
-        
-    }
-    playKey = () => {
-        this.audioSrc.currentTime = 0;
-        this.audioSrc.play();
-    }
+  constructor(audioSrc) {
+    this.audioSrc = new Audio(audioSrc);
+    // console.log(this.audioSrc);
+  }
+  playKey = () => {
+    this.audioSrc.currentTime = 0;
+    this.audioSrc.play();
+  };
 }
 
 /**
  * Button class that keeps track of the button color based on a press
  */
 class Button {
-  constructor(color, keyCode) {}
+  constructor(color, keyCode) {
+    this.color = color;
+    this.keyCode = keyCode;
+    this.element = document.getElementById(keyCode);
+    console.log(this.keyCode, this.color);
+  }
 
   /**
    * Set the button color based on color specified
