@@ -23,7 +23,6 @@ class Button {
     this.keyCode = keyCode;
     this.element = document.getElementById(keyCode);
     this.setButtonColorInHTML(color);
-    this.select();
     console.log(this.keyCode, this.color);
   }
 
