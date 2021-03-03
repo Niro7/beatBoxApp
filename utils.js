@@ -22,18 +22,25 @@ class Button {
     this.color = color;
     this.keyCode = keyCode;
     this.element = document.getElementById(keyCode);
+    this.setButtonColorInHTML(color);
+    this.select();
     console.log(this.keyCode, this.color);
   }
 
   /**
    * Set the button color based on color specified
    */
-  setButtonColorInHTML = () => {};
+  setButtonColorInHTML = (color) => {
+    this.element.style.borderColor = color;
+  };
 
   /**
    * Select function to set the background color and boxShadow
    */
-  select = () => {};
+  select = () => {
+    this.element.style.backgroundColor = this.color;
+    this.element.style.boxShadow = `0px 0px 17px 0px ${this.color}`
+  };
 
   /**
    * Deselect function to reset background color and boxShadow
