@@ -1,7 +1,5 @@
 /**
  * Beat class that keeps track of playing the audio
- * HINT: Make sure to pass in the audioSrc as parameter to create a new audio track
- * HINT: Create a play function to play the audio if called
  */
 class Beat {
   constructor(audioSrc) {
@@ -24,14 +22,12 @@ class Button {
     this.element = document.getElementById(keyCode);
     this.setButtonColorInHTML(color);
     this.setTransitionEndListener();
-    // console.log(this.keyCode, this.color);
   }
   /**
    * Set transitionend listener to remove the box-shadow & background
    */
   setTransitionEndListener = () => {
     this.element.addEventListener('transitionend', () => {
-      // console.log("Transition Ends!");
       this.deselect();
     })
   }
